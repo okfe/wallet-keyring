@@ -12,12 +12,14 @@ export const COIN_TYPE_TO_SYMBOL_MAP: ICoinTypeToSymbolMap = {
   0: SYMBOL_MAP.BTC,
   60: SYMBOL_MAP.ETH,
   195: SYMBOL_MAP.TRX,
+  501: SYMBOL_MAP.SOLANA,
 };
 
 export const SYMBOL_TO_COIN_TYPE_MAP: ISymbolToCoinTypeMap = {
   [SYMBOL_MAP.BTC]: 0,
   [SYMBOL_MAP.ETH]: 60,
   [SYMBOL_MAP.TRX]: 195,
+  [SYMBOL_MAP.SOLANA]: 501,
 };
 
 export enum KeyringMethodEnum {

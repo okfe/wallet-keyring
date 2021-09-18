@@ -8,6 +8,7 @@ import {
 import { getAccount as getBTCAccount } from './btc';
 import { getAccount as getETHAccount } from './eth';
 import { getAccount as getTRXAccount } from './trx';
+import { getAccount as getSolanaAccount } from './solana';
 
 export interface KeyringInterface {
   [KeyringMethodEnum.GET_ACCOUNT]: GetAccountInterface;
@@ -22,6 +23,9 @@ const KEYRING_MAP = {
   },
   [SYMBOL_MAP.TRX]: {
     [KeyringMethodEnum.GET_ACCOUNT]: getTRXAccount,
+  },
+  [SYMBOL_MAP.SOLANA]: {
+    [KeyringMethodEnum.GET_ACCOUNT]: getSolanaAccount,
   },
 };
 
