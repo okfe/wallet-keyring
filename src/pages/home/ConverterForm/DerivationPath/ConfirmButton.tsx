@@ -5,7 +5,7 @@ const ConfirmButton: React.FC = () => {
   return (
     <Form.Item>
       <Button type="primary" htmlType="submit">
-        Submit
+        生成地址
       </Button>
     </Form.Item>
   );

@@ -41,8 +41,7 @@ export const getAddress = (node: ethWallet.hdkey): string => {
 export const getAccount = (words: string, path: string): string => {
   const seed = mnemonicToSeedSync(words);
   const root = generateRoot(seed);
-  const node = generateNode(root, "m/44'/501'/0'/0'");
-  console.log(node.getWallet().getPrivateKeyString());
+  const node = generateNode(root, path);
   const address = getAddress(node);
   return address;
 };

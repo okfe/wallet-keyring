@@ -1,5 +1,6 @@
 import { makeAutoObservable } from 'mobx';
 import * as R from 'ramda';
+import { DEFAULT_DERIVATION_PATH_MAP } from '../constants';
 
 import { IConverterForm } from '../types';
 
@@ -27,18 +28,11 @@ export class ConverterFormStore implements IConverterFormStore {
   }
 
   get derivationPath(): string {
-    const isEmpty = R.any(R.isEmpty, R.values(this.converterForm));
-    if (isEmpty) {
+    const { symbol, mnemonic } = this.converterForm;
+    if (!symbol || !mnemonic) {
       return '';
     }
-    const {
-      purpose,
-      coinType,
-      account,
-      change,
-      addressIndex,
-    } = this.converterForm;
-    return `m/${purpose}'/${coinType}'/${account}'/${change}/${addressIndex}`;
+    return DEFAULT_DERIVATION_PATH_MAP[symbol];
   }
 
   setConverterForm(converterForm: IConverterForm): void {

@@ -24,7 +24,7 @@ const KEYRING_MAP = {
   [SYMBOL_MAP.TRX]: {
     [KeyringMethodEnum.GET_ACCOUNT]: getTRXAccount,
   },
-  [SYMBOL_MAP.SOLANA]: {
+  [SYMBOL_MAP.SOL]: {
     [KeyringMethodEnum.GET_ACCOUNT]: getSolanaAccount,
   },
 };

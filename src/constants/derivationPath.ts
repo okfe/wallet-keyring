@@ -1,0 +1,11 @@
+import SYMBOL_MAP from './symbol';
+import COIN_TYPE_MAP from './coinType';
+
+const DEFAULT_DERIVATION_PATH_MAP = {
+  [SYMBOL_MAP.BTC]: `m/44'/${COIN_TYPE_MAP[SYMBOL_MAP.BTC]}'/0'/0/0`,
+  [SYMBOL_MAP.ETH]: `m/44'/${COIN_TYPE_MAP[SYMBOL_MAP.ETH]}'/0'/0/0`,
+  [SYMBOL_MAP.TRX]: `m/44'/${COIN_TYPE_MAP[SYMBOL_MAP.TRX]}'/0'/0/0`,
+  [SYMBOL_MAP.SOL]: `m/44'/${COIN_TYPE_MAP[SYMBOL_MAP.SOL]}'/0'/0'`,
+};
+
+export default DEFAULT_DERIVATION_PATH_MAP;
